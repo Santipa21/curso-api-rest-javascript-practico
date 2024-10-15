@@ -2,20 +2,20 @@
 * { box-sizing: border-box; }
 
 :root {
-  --purple-light-1: #FBFAFB;
-  --purple-light-2: #EEEAF2;
+  --purple-light-1: #1F1C22;
+  --purple-light-2: #29262E;
   --purple-medium-1: #AA83C8;
   --purple-medium-2: #8B48BF;
   --purple-medium-3: #5C218A;
   --purple-dark-1: #3E0F64;
   --purple-dark-2: #2A0646;
 
-  --yellow: #EECC75;
-  --green: #CAD297;
-  --aqua: #B7EAC5;
-  --lightBlue: #A2EEE5;
-  --darkBlue: #8EA2EA;
-  --red: #F09D9D;
+  --yellow: #FFD700;
+  --green: #A3C6A8;
+  --aqua: #4DB6AC;
+  --lightBlue: #009688;
+  --darkBlue: #004D99;
+  --red: #E52E11;
 
   --font-family-titles: 'Dosis', sans-serif;
   --font-family-text: 'Red Hat Display', sans-serif;
@@ -26,7 +26,7 @@
 }
 
 html {
-  background-color: var(--purple-medium-3);
+  background-color: var(--red);
 }
 
 body {
@@ -46,7 +46,7 @@ h1, h2, h3 {
 
 h1, h2 {
   font-size: 24px;
-  color: var(--purple-dark-2);
+  color: #fff;
   font-family: var(--font-family-titles);
   font-weight: var(--font-weight-title1);
   margin: 0;
@@ -55,12 +55,12 @@ h1, h2 {
 
 h2 {
   font-size: 18px;
-  color: var(--purple-dark-1);
+  color: lightGrey;
   font-weight: var(--font-weight-title2);
 }
 
 h3 {
-  color: var(--purple-dark-2);
+  color: lightGrey;
   font-weight: var(--font-weight-text2);
   font-size: 16px;
 }
@@ -79,7 +79,7 @@ input::placeholder {
 }
 
 button {
-  background-color: var(--purple-dark-1);
+  background-color: var(--red);
   border: none;
   color: var(--purple-light-2);
   font-weight: var(--font-weight-text2);
@@ -99,6 +99,7 @@ button {
 
 .trendingPreview-header, .categoriesPreview-title {
   margin-bottom: 24px;
+  color:#fff;
 }
 
 .movie-container {
@@ -116,7 +117,9 @@ button {
   position: relative;
   flex-wrap: wrap;
 }
-
+.categoriesPreview-list h3{
+  color: lightGrey;
+}
 
 /* Header */
 .header-container {
@@ -139,6 +142,9 @@ button {
 
 .header-title {
   margin-bottom: 16px;
+  color: #fff;
+  text-align:center;
+  text-decoration:underline;
 }
 
 .header-arrow {
@@ -156,8 +162,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 40%;
   flex-wrap: nowrap;
+  margin:auto;
 }
 
 .header-searchForm input {
@@ -165,6 +172,10 @@ button {
   width: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  color: grey;
+}
+.header-searchForm ::placeholder{
+  color: lightGrey;
 }
 .header-searchForm button {
   width: 56px;
@@ -180,7 +191,12 @@ button {
   align-items: center;
   justify-content: space-between;
 }
-
+.trendingPreview-header h2 {
+  color: #fff;
+}
+.trendingPreview-header button {
+  color: #fff;
+}
 .trendingPreview-btn {
   border-radius: 8px;
   height: 32px;
@@ -228,7 +244,7 @@ button {
   content: '••••';
   color: transparent;
   /* TODO: cambiar color por ID de la categoría */
-  background-color: var(--idColor);
+  background-color: #fff;
   border-radius: 8px;
   margin-right: 8px;
   width: 8px;
@@ -283,6 +299,7 @@ button {
   z-index: 1;
   position: absolute;
   background-color: var(--purple-light-1);
+  width:100%;
 }
 
 .movieDetail-title {
@@ -297,6 +314,7 @@ button {
   text-align: right;
   width: 18%;
   font-weight: var(--font-weight-title2);
+  color:#fff;
 }
 .movieDetail-score::before {
   content: '★';
@@ -306,6 +324,7 @@ button {
 
 .movieDetail-description {
   margin: 0 0 24px 0;
+  color:lightGrey
 }
 
 .relatedMovies-container {
@@ -343,8 +362,8 @@ button {
 
 /* Footer */
 footer {
-  background-color: var(--purple-medium-3);
-  color: var(--purple-light-2);
+  background-color: lightGrey;
+  color: #fff;
   text-align: center;
   height: 48px;
   display: flex;
